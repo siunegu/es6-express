@@ -6,11 +6,12 @@ import logger       from 'morgan';
 import cookieParser from 'cookie-parser';
 import bodyParser   from 'body-parser';
 
-import mongoose     from 'mongoose';
-mongoose.connect('mongodb://localhost/test'); // note: change this be your db name
-
 import routes       from './routes/index';
 import users        from './routes/users'
+import blobs        from './routes/blobs'
+
+import db           from './models/db'
+import blob         from './models/blobs'
 
 //using let
 let app = express();
